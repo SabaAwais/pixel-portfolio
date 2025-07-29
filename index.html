@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Pixelify Sans' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1 class="glitch-text" data-text="Saba Awais">Saba Awais</h1>
+        <nav class="tags">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contacts.html">Contact</a></li>
+        </ul>
+    </nav>
+    </header>      
+
+    <br><br><br><br>
+    <div class="container">
+       <p class="about-sec" id="typing-text"></p>
+    </div>
+    
+    <script>
+        const text ="Welcome!\n I'm Saba, a beginner WebApp developer\n\nP.s I built this using HTMl, CSS and a bit of JS (no frameworks used!)";
+        let index=0;
+
+        function typeLetter() {
+            if (index < text.length) {
+
+                document.getElementById("typing-text").textContent += text.charAt(index);
+                index ++;
+                setTimeout(typeLetter, 45);
+            }
+        }
+
+        typeLetter();
+    </script>
+ 
+</body>

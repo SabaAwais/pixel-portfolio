@@ -1,0 +1,323 @@
+body {
+    font-family: 'Pixelify Sans';
+    padding: 20px;
+    background: linear-gradient(to bottom, #2c003e 15%, #8a007e, #ff4ecd);
+    color: white;
+    min-height: 100vh;
+    cursor: url('assets/pixel_cursor part.png'), auto;
+    padding-bottom: 100px;
+}
+
+a, button, .clickable {
+    cursor: url('assets/pixel_cursor_hand.png'), pointer;
+}
+
+header {
+    width: 100%;
+    height: 55px;
+    font-size: 50px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+/*For projects heading*/
+h3 {
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+h4 {
+    font-size: 27px;
+    text-align: center;
+}
+
+/*For tagline heading*/
+h2 {
+    padding-top: 110px;
+}
+
+nav {
+    width: 100%;
+    max-width: 370px;
+    justify-content: space-evenly;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-right: 70px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav > ul {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.about-sec {
+    font-size: 40px;
+    text-align: center;
+}
+
+.video-container {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#l-v {
+    width: 45px;
+    text-align: center;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+#contact-in {
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+}
+
+#typing-text {
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+}
+
+#typing-text::after {
+    content: "|";
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }  
+    100% { opacity: 1; }      
+}
+
+p a {
+    text-decoration: none;
+    color: wheat;
+    font-size: 25px;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.project-card {
+    background-color: #32024f;
+    color: white;
+    width: 40%;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(255,255,255,0)
+}
+
+.project-card:hover {
+    transform: translateY(-12px);
+}
+
+.card-header {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.card-media {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 15px;
+    object-fit: cover;
+}
+
+.card-media video {
+    width: 150%;
+    max-width: 400px;
+    border-radius: 8px;
+}
+
+.card-description {
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: center;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    resize: vertical;
+}
+
+.contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 20px;
+    flex-wrap: wrap;
+    background-color: #32024f;
+    color: white;
+    width: 40%;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(255,255,255,0)
+}
+
+button {
+    font-family: 'Pixelify Sans';
+    font-size: 17px;
+    display: block;
+    margin: 20px auto;
+    justify-content: center;
+    padding: 6px 16px;
+    border: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.221);
+    color: white;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 0px black;
+}
+
+label {
+    cursor: url('assets/pixel_cursor part.png'), auto;
+}
+
+.skills-card {
+    background-color: #792b74;
+    color: white;
+    width: 20%;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1.5px solid white;
+    box-shadow: 0 4px 8px rgba(255,255,255,0);
+}
+
+.skills-card:hover {
+    transform: translateY(-12px);
+}
+
+.skills-card-2 {
+    background-color: #4f174d;
+    color: white;
+    width: 20%;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1.5px solid white;
+    box-shadow: 0 4px 8px rgba(255,255,255,0);
+}
+
+.skills-card-2:hover {
+    transform: translateY(-12px);
+}
+
+.skills-card-3 {
+    background-color: #32024f;
+    color: white;
+    width: 20%;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1.5px solid white;
+    box-shadow: 0 4px 8px rgba(255,255,255,0);
+}
+
+.skills-card-3:hover {
+    transform: translateY(-12px);
+}
+
+.skills-description {
+    font-size: 20px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.icons {
+    width: 40px;
+    display: block;
+    margin: 0 auto;
+}
+
+nav a.active {
+  border-bottom: 2px solid white;
+}
+
+.glitch-text {
+  position: relative;
+  font-size: 3rem;
+  font-family: 'Pixelify Sans', monospace;
+  color: white;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  color: white;
+  clip: rect(0, 0, 0, 0);
+}
+
+.glitch-text:hover::before {
+  animation: glitchTop 0.5s infinite linear alternate-reverse;
+  color: #ff00c8;
+}
+
+.glitch-text:hover::after {
+  animation: glitchBottom 0.5s infinite linear alternate-reverse;
+  color: #7e1e8f;
+  cursor: url('assets/pixel_cursor_hand.png'), auto;
+}
+
+/* Glitch keyframes */
+@keyframes glitchTop {
+  0% {
+    clip: rect(0, 9999px, 0, 0);
+    transform: translate(-2px, -2px);
+  }
+  100% {
+    clip: rect(0, 9999px, 10px, 0);
+    transform: translate(2px, 2px);
+  }
+}
+
+@keyframes glitchBottom {
+  0% {
+    clip: rect(10px, 9999px, 9999px, 0);
+    transform: translate(2px, 2px);
+  }
+  100% {
+    clip: rect(0, 9999px, 9999px, 0);
+    transform: translate(-2px, -2px);
+  }
+}
