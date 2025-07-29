@@ -75,6 +75,11 @@ nav > ul {
     text-align: center;
 }
 
+.about-me {
+    font-size: 30px;
+    text-align: center;
+}
+
 .video-container {
     display: block;
     justify-content: center;
@@ -127,6 +132,7 @@ p a {
 
 .project-card {
     background-color: #32024f;
+    border: 1.5px solid wheat;
     color: white;
     width: 40%;
     padding: 20px;
@@ -142,7 +148,14 @@ p a {
     font-weight: bold;
     font-size: 20px;
     text-align: center;
-    margin-bottom: 25px;
+    margin-top: 12px;;
+    margin-bottom: 30px;
+}
+
+.git {
+    text-align: center;
+    font-size: 30px;
+    color: wheat;
 }
 
 .card-media {
@@ -254,6 +267,7 @@ label {
     font-size: 20px;
     text-align: center;
     vertical-align: middle;
+    color: wheat;
 }
 
 .icons {
@@ -263,7 +277,7 @@ label {
 }
 
 nav a.active {
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid wheat;
 }
 
 .glitch-text {
