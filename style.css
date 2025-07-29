@@ -3,9 +3,9 @@ body {
     padding: 20px;
     background: linear-gradient(to bottom, #2c003e 15%, #8a007e, #ff4ecd);
     color: white;
+    padding-bottom: 150px;
     min-height: 100vh;
     cursor: url('assets/pixel_cursor part.png'), auto;
-    padding-bottom: 100px;
 }
 
 a, button, .clickable {
@@ -52,13 +52,13 @@ nav {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    padding-right: 70px;
+    padding-right: 82px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 nav > ul {
@@ -72,11 +72,14 @@ nav > ul {
 
 .about-sec {
     font-size: 40px;
+    margin-top: 5px;
     text-align: center;
 }
 
 .about-me {
     font-size: 30px;
+    margin-bottom: 0;
+    padding-bottom: 0;
     text-align: center;
 }
 
@@ -313,7 +316,6 @@ nav a.active {
   cursor: url('assets/pixel_cursor_hand.png'), auto;
 }
 
-/* Glitch keyframes */
 @keyframes glitchTop {
   0% {
     clip: rect(0, 9999px, 0, 0);
@@ -334,4 +336,48 @@ nav a.active {
     clip: rect(0, 9999px, 9999px, 0);
     transform: translate(-2px, -2px);
   }
+}
+
+.vertical-timeline {
+    width: 4px;
+    position: relative;
+    height: 300px;
+    background-color: wheat;
+    margin: 0 auto;
+}
+
+.left, .right {
+    position: absolute;
+    border-radius: 10px;
+    padding: 2px 2px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #32024f;
+}
+
+.left:hover, .right:hover {
+    transform: translateY(-6px);
+    box-shadow: 2px 2px 2px 0 black;
+}
+
+.left {
+    top: 0;
+    left: -220px;
+    text-align: right;
+}
+
+.right {
+    bottom: 0;
+    right: -220px;
+    text-align: left;
+}
+
+.circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: wheat;
+    margin-bottom: 8px;
 }
