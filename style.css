@@ -437,3 +437,44 @@ nav a.active {
     }
     
 }
+
+.project-category {
+    width: 85%;
+    margin: 25px auto;
+    padding: 20px;
+    background-color: #32024f;
+    border: 2px solid wheat;
+    border-radius: 15px;
+}
+
+.project-category summary {
+    font-size: 32px;
+    color: wheat;
+    cursor: pointer;
+    list-style: none;
+    text-align: center;
+    padding: 10px;
+}
+
+.project-category summary::-webkit-details-marker {
+    display: none;
+}
+
+.project-category summary::before {
+    content: "▶ ";
+}
+
+.project-category[open] summary::before {
+    content: "▼ ";
+}
+
+.project-category[open] summary {
+    margin-bottom: 20px;
+}
+
+.empty-section {
+    text-align: center;
+    font-size: 22px;
+    color: wheat;
+    padding: 20px;
+}
