@@ -438,47 +438,6 @@ nav a.active {
     
 }
 
-.project-category {
-    width: 85%;
-    margin: 25px auto;
-    padding: 20px;
-    background-color: #32024f;
-    border: 2px solid wheat;
-    border-radius: 15px;
-}
-
-.project-category summary {
-    font-size: 32px;
-    color: wheat;
-    cursor: pointer;
-    list-style: none;
-    text-align: center;
-    padding: 10px;
-}
-
-.project-category summary::-webkit-details-marker {
-    display: none;
-}
-
-.project-category summary::before {
-    content: "▶ ";
-}
-
-.project-category[open] summary::before {
-    content: "▼ ";
-}
-
-.project-category[open] summary {
-    margin-bottom: 20px;
-}
-
-.empty-section {
-    text-align: center;
-    font-size: 22px;
-    color: wheat;
-    padding: 20px;
-}
-
 .dropdown {
     position: relative;
 }
@@ -486,32 +445,38 @@ nav a.active {
 .dropdown-menu {
     display: none;
     position: absolute;
-    top: 35px;
+    top: 100%;
     left: 0;
     background-color: #32024f;
-    border: 1px solid wheat;
+    border: 2px solid wheat;
     border-radius: 10px;
-    min-width: 150px;
+    min-width: 180px;
+    padding: 0;
     z-index: 1000;
-    padding: 10px 0;
 }
 
 .dropdown-menu li {
     list-style: none;
-    padding: 10px;
-    text-align: center;
 }
 
 .dropdown-menu li a {
+    display: block;
+    padding: 12px;
     color: white;
     text-decoration: none;
-    display: block;
+    text-align: center;
 }
 
-.dropdown-menu li:hover {
+.dropdown-menu li a:hover {
     background-color: #792b74;
 }
 
 .dropdown:hover .dropdown-menu {
     display: block;
+}
+
+.projects-button {
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
 }
