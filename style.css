@@ -39,11 +39,6 @@ h4 {
     text-align: center;
 }
 
-
-h2 {
-    padding-top: 110px;
-}
-
 nav {
     width: 100%;
     max-width: 370px;
@@ -437,20 +432,28 @@ nav a.active {
     }
     
 }
-
 .dropdown {
     position: relative;
+    display: inline-block;
+}
+
+.projects-button {
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    white-space: nowrap;
 }
 
 .dropdown-menu {
     display: none;
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: #32024f;
     border: 2px solid wheat;
     border-radius: 10px;
-    min-width: 180px;
+    min-width: 170px;
     padding: 0;
     z-index: 1000;
 }
@@ -473,10 +476,4 @@ nav a.active {
 
 .dropdown:hover .dropdown-menu {
     display: block;
-}
-
-.projects-button {
-    color: white;
-    font-size: 22px;
-    cursor: pointer;
 }
