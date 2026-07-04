@@ -168,9 +168,11 @@ p a {
 }
 
 .card-media video {
-    width: 150%;
-    max-width: 400px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
     border-radius: 8px;
+    display: block;
 }
 
 .card-description {
@@ -379,4 +381,58 @@ nav a.active {
     border-radius: 50%;
     background-color: wheat;
     margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+
+    header {
+        height: auto;
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        max-width: 100%;
+        padding-right: 0;
+        margin-top: 10px;
+    }
+
+    nav ul {
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .about-sec {
+        font-size: 30px;
+    }
+
+    .about-me {
+        font-size: 22px;
+    }
+
+    .project-card,
+    .skills-card,
+    .skills-card-2,
+    .skills-card-3,
+    .contact-form {
+        width: 90%;
+    }
+
+    .left,
+    .right {
+        position: static;
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .vertical-timeline {
+        width: 2px;
+        height: auto;
+        background: none;
+    }
 }
