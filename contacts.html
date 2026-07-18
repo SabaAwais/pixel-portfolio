@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Pixelify Sans' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1 class="glitch-text" data-text="Saba Awais">Saba Awais</h1>
+        <nav class="tags">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li class="dropdown">
+    <span class="projects-button">Projects▼</span>
+
+    <ul class="dropdown-menu">
+        <li><a href="coding.html">Coding</a></li>
+        <li><a href="design.html">Design</a></li>
+        <li><a href="finance.html">Finance</a></li>
+    </ul>
+</li>
+            <li><a href="contacts.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <h2 class="about-sec">Contact Information</h2>
+    <div class="container">
+        <p id="contact-in"><img id="l-v" src="images\linkedin.png"><a href="https://www.linkedin.com/in/saba-awais-80027a323" target="_blank">Saba's LinkedIn</a></p>
+        <br> <p id="contact-in"><img id="l-v" src="images\github.png"><a href="https://github.com/SabaAwais" target="_blank">Saba's GitHub<a href="" target="_blank"></a></p>
+    </div>
+
+    <div class="contact-form">
+        <form action="https://formspree.io/f/xgojrddq" method="POST">
+            <h3 class="git">Get in Touch</h3>
+            <label for="name">Name: </label>
+                <input id="name" name="name" type="text" required>
+            <br><br>
+            <label for="email">Email:</label>
+                <input id="email" name="email" type="email" required>
+            <br><br>
+            <label for="message">Message:</label><br><br>
+                <textarea id="message" rows="5" columns="40" name="message" placeholder="Leave a message for Saba" required></textarea>
+            <br><br>
+            <button id="send" type="submit">Send</button>
+        </form>
+    </div>
+</body>
