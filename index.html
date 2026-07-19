@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <title>Saba Awais | FinTech Portfolio</title>
 </head>
 <body>
@@ -23,8 +23,7 @@
 
 <section id="about">
 <h2 class="about-sec" id="typing-text"></h2>
-<p class="about-me">A Financial Technology student exploring the intersection of programming, finance, and technology.</p>
-<p class="about-me">I'm currently pursuing a Bachelor's degree in Financial Technology at FAST-NUCES Islamabad. I enjoy building software projects, analysing data, and exploring how technology can improve financial systems.</p>
+<p class="about-me">I'm a Financial Technology student at FAST-NUCES Islamabad, currently building my way through a degree that sits right between programming, finance, and data. I always like learning new stuff and seeing what I can build with the knowledge!</p>
 
 <h3 class="sub-heading">Education</h3>
 <p class="about-me">
@@ -32,47 +31,103 @@ BS Financial Technology<br>
 FAST National University of Computer and Emerging Sciences, Islamabad<br>
 2024 - 2028
 </p>
-<p class="about-me">
-Relevant Coursework: Data Structures & Algorithms, Object Oriented Programming, Database Systems, Financial Management, Data Analysis
-</p>
+<p class="about-me">Relevant Coursework:</p>
+<ul class="plain-list">
+<li>Data Structures & Algorithms</li>
+<li>Object Oriented Programming</li>
+<li>Database Systems</li>
+<li>Financial Management</li>
+<li>Data Analysis</li>
+</ul>
 
 <h3 class="sub-heading">Currently Exploring</h3>
-<p class="about-me">Artificial Intelligence & Machine Learning and Agentic AI workflows.</p>
+<ul class="plain-list">
+<li>Artificial Intelligence & Machine Learning</li>
+<li>Agentic AI workflows</li>
+</ul>
 </section>
 
 <section id="projects">
 <h2 class="about-sec">Projects</h2>
+
+<h3 class="sub-heading">Programming and Database</h3>
 <div class="projects-container">
 
 <div class="project-card">
-<div class="card-header">StockFlow</div>
+<div class="card-top">
+<div class="card-header">Inventory Manager</div>
 <p class="card-description">
-C++ | Object Oriented Programming<br><br>
-A console based inventory management system for handling products, suppliers, and retailers using core OOP principles.
+C++ | OOP <br><br>
+A console based system for tracking products, suppliers, and retailers, built to practice core OOP concepts like classes, inheritance, and encapsulation.
 </p>
+</div>
 <a href="https://github.com/SabaAwais/inventory-management-system" target="_blank">
 <button>View on GitHub</button>
 </a>
 </div>
 
 <div class="project-card">
-<div class="card-header">Atlas Rising</div>
+<div class="card-top">
+<div class="card-header">Dragon Quest</div>
 <p class="card-description">
-C++ | OOP<br><br>
-An RPG following Atlas as he battles through enemy infested realms, featuring a full combat system, an in-game marketplace, evolving player statistics, and progressively challenging enemies.
+C++ | OOP | DSA<br><br>
+A small RPG built around a character named Atlas. It's got a working combat system, a marketplace, player stats that grow as you play, and enemies that get harder to deal with the further you go.
 </p>
-<button>Coming Soon</button>
+</div>
+<a href="" target="_blank">
+<button>View on GitHub</button>
+</a>
 </div>
 
 <div class="project-card">
-<div class="card-header">DineFlow</div>
+<div class="card-top">
+<div class="card-header">Diner Manager</div>
 <video class="card-media" controls>
 <source src="videos/FINALPROJ_DB.mp4" type="video/mp4">
 </video>
 <p class="card-description">
-PHP | MySQL | Database Systems<br><br>
-A restaurant management system featuring database design, order processing, transactions, and analytics.
+PHP | MySQL | Database Systems <br><br>
+A restaurant ordering system covering the database side of things, order processing, transactions, and basic analytics.
 </p>
+</div>
+<a href="https://github.com/SabaAwais/restaurant-ordering-system" target="_blank">
+<button>View on GitHub</button>
+</a>
+</div>
+
+</div>
+
+<h3 class="sub-heading">Data & Finance</h3>
+<div class="projects-container">
+
+<div class="project-card">
+<div class="card-top">
+<div class="card-header">Superstore Sales Analysis</div>
+<p class="card-description">
+Excel | IBM SPSS | Statistics<br><br>
+A Data Analysis II course project analyzing the Superstore Sales dataset using Excel and IBM SPSS. Covers hypothesis testing, correlation, and regression analysis to evaluate profitability across customer segments and product categories.
+</p>
+</div>
+</div>
+
+<div class="project-card">
+<div class="card-top">
+<div class="card-header">Fauji Fertilizer Financial Analysis</div>
+<p class="card-description">
+Excel | Financial Modeling<br><br>
+A Financial Management course project analyzing Fauji Fertilizer Company (FY2020-2025) using time value of money, cash flow estimation, and capital budgeting techniques. Includes corporate valuation through AFN and SSGR analysis.
+</p>
+</div>
+</div>
+
+<div class="project-card">
+<div class="card-top">
+<div class="card-header">Carbon Salary</div>
+<p class="card-description">
+Figma Design | UX Research<br><br>
+An Environmental Science project prototyping a corporate carbon emissions tracking app in Figma Design, shaped by an expert feedback session with an ESG strategy specialist. Includes a year-on-year emissions comparison view, a graphical dashboard, and a dedicated feature for tracking employee computing emissions.
+</p>
+</div>
 </div>
 
 </div>
@@ -80,33 +135,33 @@ A restaurant management system featuring database design, order processing, tran
 
 <section id="skills">
 <h2 class="about-sec">Skills</h2>
-<div class="skills-table-container">
-<table class="skills-table">
-<tr>
-<td>
+<div class="skills-list">
+
+<div class="skills-group">
 <h3>Programming</h3>
-<p>C++<br>Python<br>HTML/CSS<br>JavaScript<br>SQL</p>
-</td>
-<td>
+<p>C++, Python, HTML/CSS, JavaScript</p>
+</div>
+
+<div class="skills-group">
 <h3>Databases & Documentation</h3>
-<p>MySQL<br>Database Design<br>ER Diagrams<br>Functional Requirements<br>Documentation</p>
-</td>
-<td>
+<p>SQL, Database Design, ER Diagrams, Functional Requirements, Documentation</p>
+</div>
+
+<div class="skills-group">
 <h3>Finance</h3>
-<p>Digital Payments<br>Financial Analysis<br>Financial Accounting</p>
-</td>
-</tr>
-<tr>
-<td colspan="2">
+<p>Digital Payments, Financial Analysis, Financial Accounting</p>
+</div>
+
+<div class="skills-group">
 <h3>Creative Skills</h3>
-<p>UI Design<br>Figma<br>Canva<br>Photoshop<br>Inkscape<br>Responsive Design<br>Pixel Art Aesthetics</p>
-</td>
-<td>
+<p>Adobe Photoshop, Inkscape, Figma, Canva, Responsive Design, Pixel Art Aesthetics</p>
+</div>
+
+<div class="skills-group">
 <h3>Tools</h3>
-<p>Git & GitHub<br>VS Code<br>Visual Studio<br>MySQL Workbench</p>
-</td>
-</tr>
-</table>
+<p>Git & GitHub, VS Code, Visual Studio, MySQL Workbench</p>
+</div>
+
 </div>
 </section>
 

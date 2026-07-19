@@ -8,7 +8,6 @@
     --purple-dark:#5b21b6;
     --pink-dark:#be185d;
     --glitch-pink:#ec4899;
-    --gold:#d97706;
     --white:#ffffff;
 }
 
@@ -32,13 +31,14 @@ a,button,.clickable{
     cursor:url('assets/pixel_cursor_hand.png'),pointer;
 }
 
+.glitch-text,
 .about-sec,
 .sub-heading,
+.card-header,
+.skills-group h3,
+.git,
+nav a,
 button{
-    font-family:'Space Grotesk',sans-serif;
-}
-
-.glitch-text{
     font-family:'Pixelify Sans',monospace;
 }
 
@@ -59,7 +59,7 @@ header{
 }
 
 h1{
-    font-size:50px;
+    font-size:44px;
     margin:0;
 }
 
@@ -107,7 +107,6 @@ nav a:hover{
 
 .contact-nav a:hover{
     background:var(--purple-dark);
-    transform:translateY(-3px);
 }
 
 section{
@@ -143,9 +142,9 @@ section:not(:first-of-type)::before{
 }
 
 .about-sec{
-    font-size:48px;
-    font-weight:700;
-    letter-spacing:-0.5px;
+    font-size:40px;
+    font-weight:500;
+    letter-spacing:0.5px;
     text-align:center;
     margin-top:20px;
     background:linear-gradient(90deg,var(--purple-dark),var(--pink-dark));
@@ -155,10 +154,8 @@ section:not(:first-of-type)::before{
 }
 
 .sub-heading{
-    font-size:22px;
-    font-weight:600;
-    letter-spacing:2px;
-    text-transform:uppercase;
+    font-size:23px;
+    letter-spacing:1px;
     text-align:center;
     color:var(--purple-dark);
     margin-top:55px;
@@ -183,8 +180,34 @@ section:not(:first-of-type)::before{
 }
 
 #typing-text{
-    font-size:45px;
-    color:var(--purple-dark);
+    font-size:44px;
+}
+
+.plain-list{
+    list-style:none;
+    max-width:550px;
+    margin:20px auto;
+    padding:0;
+    font-size:17px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px 28px;
+}
+
+.plain-list li{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.plain-list li::before{
+    content:"";
+    width:7px;
+    height:7px;
+    background:var(--glitch-pink);
+    border-radius:2px;
+    flex-shrink:0;
 }
 
 #typing-text::after{
@@ -199,7 +222,7 @@ section:not(:first-of-type)::before{
 .glitch-text{
     position:relative;
     color:var(--purple-dark);
-    font-size:3rem;
+    font-size:2.9rem;
     display:inline-block;
 }
 
@@ -216,27 +239,29 @@ section:not(:first-of-type)::before{
 .glitch-text:hover::before{
     color:#ec4899;
     opacity:1;
-    animation:glitch1 .8s infinite;
+    animation:glitch1 2.2s infinite;
 }
 
 .glitch-text:hover::after{
     color:#8b5cf6;
     opacity:1;
-    animation:glitch2 .8s infinite;
+    animation:glitch2 2.4s infinite;
 }
 
 @keyframes glitch1{
     0%{ transform:translate(0); }
-    20%{ transform:translate(-3px,2px); }
-    40%{ transform:translate(3px,-2px); }
-    60%{ transform:translate(-2px,3px); }
+    20%{ transform:translate(1.5px,-1px); }
+    40%{ transform:translate(-1.5px,1px); }
+    60%{ transform:translate(1px,1.5px); }
+    80%{ transform:translate(-1px,-1px); }
     100%{ transform:translate(0); }
 }
 
 @keyframes glitch2{
     0%{ transform:translate(0); }
-    25%{ transform:translate(3px,-2px); }
-    50%{ transform:translate(-3px,2px); }
+    25%{ transform:translate(-1.5px,1px); }
+    50%{ transform:translate(1.5px,-1px); }
+    75%{ transform:translate(-1px,-1.5px); }
     100%{ transform:translate(0); }
 }
 
@@ -246,6 +271,7 @@ section:not(:first-of-type)::before{
     gap:30px;
     flex-wrap:wrap;
     margin-top:40px;
+    align-items:stretch;
 }
 
 .project-card{
@@ -257,16 +283,21 @@ section:not(:first-of-type)::before{
     border:1px solid #ddd6fe;
     box-shadow:0 6px 16px rgba(124,58,237,.08);
     transition:.3s;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
 }
 
 .project-card:hover{
     transform:translateY(-6px);
 }
 
+.card-top{
+    flex:1;
+}
+
 .card-header{
-    font-family:'Space Grotesk',sans-serif;
-    font-size:24px;
-    font-weight:700;
+    font-size:22px;
     letter-spacing:0.5px;
     text-align:center;
     color:var(--purple-dark);
@@ -282,15 +313,23 @@ section:not(:first-of-type)::before{
 .card-media{
     width:100%;
     border-radius:15px;
+    margin-bottom:15px;
+}
+
+.project-card > a,
+.project-card > button{
+    margin-top:20px;
+    align-self:flex-start;
 }
 
 button{
     background:var(--purple);
     color:white;
     border:none;
-    padding:10px 20px;
-    border-radius:10px;
-    font-size:16px;
+    padding:8px 16px;
+    border-radius:8px;
+    font-size:13px;
+    width:auto;
 }
 
 button:hover{
@@ -298,38 +337,37 @@ button:hover{
     transform:translateY(-2px);
 }
 
-.skills-table-container{
-    display:flex;
-    justify-content:center;
+.skills-list{
+    max-width:850px;
+    margin:40px auto 0 auto;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:35px 60px;
 }
 
-.skills-table{
-    width:85%;
-    border-collapse:separate;
-    border-spacing:25px;
+.skills-group{
+    border-bottom:2px solid var(--lavender-dark);
+    padding-bottom:15px;
 }
 
-.skills-table td{
-    background:var(--lavender);
-    border:1px solid #ddd6fe;
-    border-radius:20px;
-    padding:25px;
+.skills-list .skills-group:last-child{
+    grid-column:1 / -1;
     text-align:center;
-    vertical-align:top;
+    border-bottom:none;
 }
 
-.skills-table h3{
-    font-family:'Space Grotesk',sans-serif;
-    font-size:22px;
-    font-weight:700;
+.skills-group h3{
+    font-size:20px;
     letter-spacing:0.5px;
     color:var(--purple-dark);
-    margin-top:0;
+    margin:0 0 10px 0;
 }
 
-.skills-table p{
+.skills-group p{
     font-size:16px;
-    line-height:2;
+    line-height:1.8;
+    color:var(--text);
+    margin:0;
 }
 
 #contacts{
@@ -359,9 +397,7 @@ button:hover{
 }
 
 .git{
-    font-family:'Space Grotesk',sans-serif;
-    font-size:26px;
-    font-weight:700;
+    font-size:22px;
     letter-spacing:0.5px;
     color:var(--purple-dark);
 }
@@ -387,7 +423,7 @@ textarea{
     }
 
     h1{
-        font-size:35px;
+        font-size:30px;
     }
 
     nav ul{
@@ -397,7 +433,7 @@ textarea{
     }
 
     .about-sec{
-        font-size:32px;
+        font-size:28px;
     }
 
     .about-me{
@@ -408,15 +444,8 @@ textarea{
         width:90%;
     }
 
-    .skills-table,
-    .skills-table tr,
-    .skills-table td{
-        display:block;
-        width:100%;
-    }
-
-    .skills-table td{
-        margin-bottom:20px;
+    .skills-list{
+        grid-template-columns:1fr;
     }
 
     .contact-container,
