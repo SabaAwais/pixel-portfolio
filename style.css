@@ -1,14 +1,21 @@
 :root {
-    --bg:#f3eef4;
-    --bg-alt:#ece3ee;
-    --text:#292524;
-    --lavender:#ede9fe;
-    --lavender-dark:#c4b5fd;
-    --purple:#7c3aed;
-    --purple-dark:#5b21b6;
-    --pink-dark:#be185d;
-    --glitch-pink:#ec4899;
-    --white:#ffffff;
+    --bg:#fffce5;            /* Main page background (#about, #skills sections) */
+    --bg-alt:#fdecef;        /* Alternate section background (#projects, #contacts) */
+    --text:#06070E;          /* Default body/paragraph text color */
+    --lavender-dark:#F6D6CF; /* Skills-group divider line*/
+    --purple:#b1685c;        /* Buttons, contact icon background, section divider line */
+    --purple-dark:#CE4760;   /* Headings h1 "Saba Awais", "Hi, I'm Saba", sub-headings, card headers, skills headings, "Get in Touch", button hover, and one end of the section-title gradient */
+    --secondglitch-hover:#ec9ba7;
+    --firstglitch: #fde31e;
+    --glitch-pink:#5f2b24;   /* Sub-heading underline, list bullet dots*/
+    --taupe:#C5AFA0;         /* All soft borders: header, nav, cards, contact box, form inputs */
+    
+    --taupe-dark:#CE4760;    /* Default (non-hover) nav link color */
+    --hover-link:#f0a1ad ;
+    --navlinkhover: #6c3b34;;
+
+    --white:#ffffff;         /* Defined but not directly referenced (project cards/contact boxes use white literally) */
+    --pink-dark:#c98f86;     /* Other end of the section-title gradient (About/Projects/Skills/Contact headings) */
 }
 
 *{
@@ -22,7 +29,7 @@ html{
 body{
     background:var(--bg);
     color:var(--text);
-    font-family:'Inter',sans-serif;
+    font-family:'Space Grotesk',sans-serif;
     cursor:url('assets/pixel_cursor part.png'),auto;
     margin:0;
 }
@@ -47,7 +54,7 @@ header{
     margin:20px auto;
     padding:15px 35px;
     background:rgba(255,255,255,.8);
-    border:2px solid #ddd6fe;
+    border:2px solid var(--taupe);
     border-radius:20px;
     display:flex;
     align-items:center;
@@ -64,10 +71,10 @@ h1{
 }
 
 nav{
-    background:#f5f3ff;
+    background:var(--bg);
     padding:12px 35px;
     border-radius:50px;
-    border:1px solid #ddd6fe;
+    border:1px solid var(--taupe);
 }
 
 nav ul{
@@ -80,13 +87,14 @@ nav ul{
 }
 
 nav a{
-    color:var(--purple-dark);
+    color:var(--taupe-dark);
     text-decoration:none;
     font-size:20px;
+    transition:.3s;
 }
 
 nav a:hover{
-    color:var(--glitch-pink);
+    color:var(--hover-link);
 }
 
 .contact-nav a{
@@ -101,12 +109,12 @@ nav a:hover{
     text-align:center;
     line-height:1;
     font-size:22px;
-    border:2px solid #ddd6fe;
+    border:2px solid var(--taupe);
     transition:.3s;
 }
 
 .contact-nav a:hover{
-    background:var(--purple-dark);
+    background:var(--navlinkhover);
 }
 
 section{
@@ -151,6 +159,13 @@ section:not(:first-of-type)::before{
     -webkit-background-clip:text;
     background-clip:text;
     color:transparent;
+}
+
+/* "Hi, I'm Saba" stays a solid color, matching the h1 and nav hover state instead of the section-title gradient */
+#typing-text{
+    background:none;
+    -webkit-text-fill-color:var(--purple-dark);
+    color:var(--purple-dark);
 }
 
 .sub-heading{
@@ -237,13 +252,13 @@ section:not(:first-of-type)::before{
 }
 
 .glitch-text:hover::before{
-    color:#ec4899;
+    color:var(--firstglitch);
     opacity:1;
     animation:glitch1 2.2s infinite;
 }
 
 .glitch-text:hover::after{
-    color:#8b5cf6;
+    color:var(--secondglitch-hover);
     opacity:1;
     animation:glitch2 2.4s infinite;
 }
@@ -280,8 +295,8 @@ section:not(:first-of-type)::before{
     min-width:300px;
     padding:25px;
     border-radius:20px;
-    border:1px solid #ddd6fe;
-    box-shadow:0 6px 16px rgba(124,58,237,.08);
+    border:1px solid var(--taupe);
+    box-shadow:0 6px 16px rgba(41,82,74,.10);
     transition:.3s;
     display:flex;
     flex-direction:column;
@@ -333,7 +348,7 @@ button{
 }
 
 button:hover{
-    background:var(--purple-dark);
+    background:var(--navlinkhover);
     transform:translateY(-2px);
 }
 
@@ -381,8 +396,8 @@ button:hover{
     margin:30px auto;
     padding:30px;
     border-radius:20px;
-    border:1px solid #ddd6fe;
-    box-shadow:0 6px 16px rgba(124,58,237,.08);
+    border:1px solid var(--taupe);
+    box-shadow:0 6px 16px rgba(41,82,74,.10);
 }
 
 .contact-container a{
@@ -404,12 +419,12 @@ button:hover{
 
 input,
 textarea{
-    width:90%;
+    width:70%;
     max-width:100%;
     padding:10px;
     border-radius:10px;
-    border:1px solid #ddd6fe;
-    font-family:'Inter';
+    border:1px solid var(--taupe);
+    font-family:'Space Grotesk';
 }
 
 textarea{
